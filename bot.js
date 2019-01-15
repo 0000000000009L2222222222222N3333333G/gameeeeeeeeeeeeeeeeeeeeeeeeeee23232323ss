@@ -62,6 +62,27 @@ client.on("message", message => {
     });
 
 
+client.on("message", message => {
+ if (message.content === "$help") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+***
+اوامر الالعاب
+$8ball
+$mcskin
+$cuttweet
+$sra7a
+$عقاب
+$مريم
+$rps
+$quas
+$slots
+$pubg
+`)
+
+
 
  const cuttweet = [
      'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
@@ -246,7 +267,7 @@ client.on('message', message => {
 var embed = new Discord.RichEmbed()
 .setColor('RANDOM')
  .setThumbnail(message.author.avatarURL) 
-.addField('QueenBot.' ,
+.addField('Bot 9LnG.' ,
 `${Za7f[Math.floor(Math.random() * Za7f.length)]}`)
 message.channel.sendEmbed(embed);
 console.log('[38ab] Send By: ' + message.author.username)
