@@ -62,25 +62,24 @@ client.on("message", message => {
     });
 
 
-client.on("message", message => {
- if (message.content === "$help") {
-  const embed = new Discord.RichEmbed() 
-      .setColor("#ffff00")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
-***
-اوامر الالعاب
-$8ball
-$mcskin
-$cuttweet
-$sra7a
-$عقاب
-$مريم
-$rps
-$quas
-$slots
-$pubg
-`)
+client.on('message', message => {
+    if (message.content === 'help') {
+        let helpEmbed = new Discord.RichEmbed()
+        .setTitle('اوامر الالعاب')
+        .setDescription('**برفكس البوت ($)**')
+        .addField('pubg', 'يعطيك اسئلة عن ببجي)
+        .addField('mcskin', 'يعطيك سكنات ماين كرافت')
+        .addField('cuttweet', 'كت تويت')
+        .addField('sra7a', 'صراحه')
+        .addField('عقاب', 'يعطيك عقاب عشوائ')
+        .addField('quas', 'اسئله')
+        .addField('8ball', '')
+        .addField('rps', '')
+        .addField('slots', '')
+        .addField('مريم', 'لعبة مريم')
+      message.channel.send(helpEmbed);
+    }
+});
 
 
 
