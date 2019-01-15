@@ -62,32 +62,6 @@ client.on("message", message => {
     });
 
 
-lient.on("message", message => {
- if (message.content === "$help") {
-  const embed = new Discord.RichEmbed() 
-      .setColor("#ffff00")
-      .setThumbnail(message.author.avatarURL)
-      .setDescription(`
-pubg', 'يعطيك اسئلة عن ببجي
-mcskin', 'يعطيك سكنات ماين كرافت
-cuttweet', 'كت تويت
-sra7a', 'صراحه
-'عقاب', 'يعطيك عقاب عشوائ
-quas', 'اسئله
-8ball
-rps
-slots
-مريم', 'لعبة مريم
-
-
-`)
-
-
-message.author.sendEmbed(embed)
-
-}
-}); 
-
 
  const cuttweet = [
      'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
