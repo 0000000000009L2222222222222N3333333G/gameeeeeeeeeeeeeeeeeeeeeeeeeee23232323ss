@@ -62,25 +62,31 @@ client.on("message", message => {
     });
 
 
-client.on('message', message => {
-    if (message.content === 'help') {
-        let helpEmbed = new Discord.RichEmbed()
-        .setTitle('اوامر الالعاب')
-        .setDescription('**برفكس البوت ($)**')
-        .addField('pubg', 'يعطيك اسئلة عن ببجي)
-        .addField('mcskin', 'يعطيك سكنات ماين كرافت')
-        .addField('cuttweet', 'كت تويت')
-        .addField('sra7a', 'صراحه')
-        .addField('عقاب', 'يعطيك عقاب عشوائ')
-        .addField('quas', 'اسئله')
-        .addField('8ball', '')
-        .addField('rps', '')
-        .addField('slots', '')
-        .addField('مريم', 'لعبة مريم')
-      message.channel.send(helpEmbed);
-    }
-});
+lient.on("message", message => {
+ if (message.content === "$help") {
+  const embed = new Discord.RichEmbed() 
+      .setColor("#ffff00")
+      .setThumbnail(message.author.avatarURL)
+      .setDescription(`
+pubg', 'يعطيك اسئلة عن ببجي
+mcskin', 'يعطيك سكنات ماين كرافت
+cuttweet', 'كت تويت
+sra7a', 'صراحه
+'عقاب', 'يعطيك عقاب عشوائ
+quas', 'اسئله
+8ball
+rps
+slots
+مريم', 'لعبة مريم
 
+
+`)
+
+
+message.author.sendEmbed(embed)
+
+}
+}); 
 
 
  const cuttweet = [
